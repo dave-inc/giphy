@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const API_KEY = 'aHi5kZ49h4esZTalKqyvkBO2llvuHeJr';
+const GIPHY_URL = `http://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=bears`;
+const DEFAULT_STATE = {
+  imageUrl: 'https://media2.giphy.com/media/JFqi3YfZmn3Og/giphy.gif',
+}
+
+class App extends Component {
+
+  state = DEFAULT_STATE;
+
+  fetchImage = async () => {
+    fetch(GIPHY_URL)
+      .then(response => response.json())
+      .then(data => {
+        const imageUrl = data.data.images.original.url;
+        this.setState({ imageUrl });
+      });
+  }
+
+  render() {
+    const { imageUrl } = this.state;
+
+    return (
+      <div className="App">
+        <p><button onClick={this.fetchImage}>Fetch Image</button></p>
+        <img alt="Bear GIF" src={imageUrl} />
+      </div >
+    );
+  }
 }
 
 export default App;
