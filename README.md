@@ -1,3 +1,30 @@
+# Codetalk Coding Challenge
+
+Install homebrew https://brew.sh/
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+1. Install node via homebrew
+ - brew install node
+2. Run npm -v to make sure that the version is higher than 6
+3. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
+
+```
+npm init react-app my-app
+cd my-app
+npm start
+```
+
+4. Update the gif, Google ‘bear gif’ and replace the Image ‘src’ in line 9 with the url of a bear gif (make sure that it has .gif at the end)
+
+Remove the following lines of code:
+
+```
+<p>
+  Edit <code>src/App.js</code> and save to reload.
+</p>
+<a
+  className="App-link"
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
