@@ -1,7 +1,10 @@
 # Codetalk Coding Challenge
 
 Install homebrew https://brew.sh/
+```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 1. Install node via homebrew
  - brew install node
 2. Run npm -v to make sure that the version is higher than 6
