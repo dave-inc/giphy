@@ -6,7 +6,10 @@ Install homebrew https://brew.sh/
 ```
 
 1. Install node via homebrew
- - brew install node
+```
+brew install node
+```
+
 2. Run npm -v to make sure that the version is higher than 6
 3. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
 
