@@ -1,17 +1,18 @@
 # Codetalk Coding Challenge
 
-Install homebrew https://brew.sh/
+1. Install homebrew https://brew.sh/
+
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-1. Install node via homebrew
+2. Install node via homebrew
 ```
 brew install node
 ```
 
-2. Run npm -v to make sure that the version is higher than 6
-3. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
+4. Run npm -v to make sure that the version is higher than 6
+5. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
 
 ```
 npm init react-app my-app
@@ -19,10 +20,10 @@ cd my-app
 npm start
 ```
 
-4. Open src > App.js
-5. Update the gif, Google ‘bear gif’ and replace the Image ‘src’ in line 9 with the url of a bear gif (make sure that it has .gif at the end)
+6. Open src > App.js
+7. Update the gif, Google ‘bear gif’ and replace the Image ‘src’ in line 9 with the url of a bear gif (make sure that it has .gif at the end)
 
-6. Remove the following lines of code:
+8. Remove the following lines of code:
 
 ```
 <p>
@@ -39,8 +40,8 @@ npm start
 
 ```
 
-7. Check out src/App.css.  Can you figure out why the image is spinning?
-8. Adding a button to src/App.js
+9. Check out src/App.css.  Can you figure out why the image is spinning?
+10. Adding a button to src/App.js
 ```
 <button>Get More Bear Gifs</button>
 ```
@@ -50,7 +51,7 @@ Add an onClick callback to the button
 <button onClick={() =>window.alert("hello")}>I'm a button</button>
 ```
 
-9. Making requests - We will be using Javascript’s Fetch API
+11. Making requests - We will be using Javascript’s Fetch API
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
 
