@@ -11,7 +11,7 @@ class App extends Component {
 
   state = DEFAULT_STATE;
 
-  fetchImage = async () => {
+  fetchImage = () => {
     fetch(GIPHY_URL)
       .then(response => response.json())
       .then(data => {
@@ -25,7 +25,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <p><button onClick={this.fetchImage}>Fetch Image</button></p>
+        <button className="button" onClick={this.fetchImage}>Fetch Image</button>
         <img alt="Bear GIF" src={imageUrl} />
       </div >
     );
