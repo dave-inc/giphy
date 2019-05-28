@@ -5,3 +5,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.button {
+  margin-bottom: 10px;
+}
