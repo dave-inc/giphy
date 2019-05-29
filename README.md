@@ -62,6 +62,7 @@ After you see the `hello` message, modify the code to alert the `imageSource`
 
 12. Move the onClick function to a separate component method called `fetchImage`
 
+
 ```
 <button onClick={this.fetchImage}>Get More Bear Gifs</button>
 ```
@@ -72,9 +73,9 @@ After you see the `hello` message, modify the code to alert the `imageSource`
 
 13. Modify the `fetchImage` function to fetch an image
 
-[Giphy Developer Docs](https://developers.giphy.com/docs/)
-[Javascript’s Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-**GIPHY API KEY**: `aHi5kZ49h4esZTalKqyvkBO2llvuHeJr`
+ - [Giphy Developer Docs](https://developers.giphy.com/docs/)
+ - [Javascript’s Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+ - **GIPHY API KEY**: `aHi5kZ49h4esZTalKqyvkBO2llvuHeJr`
 
 Example:
 ```
