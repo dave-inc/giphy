@@ -10,9 +10,9 @@
 ```
 brew install node
 ```
+Run npm -v to make sure that the version is higher than 6
 
-4. Run npm -v to make sure that the version is higher than 6
-5. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
+3. Create React App: https://facebook.github.io/create-react-app/docs/getting-started
 
 ```
 npm init react-app my-app
@@ -20,39 +20,70 @@ cd my-app
 npm start
 ```
 
-6. Open src > App.js
-7. Update the gif, Google ‘bear gif’ and replace the Image ‘src’ in line 9 with the url of a bear gif (make sure that it has .gif at the end)
+Now open `src/App.js` with a code editor
 
-8. Remove the following lines of code:
+---
 
-```
-<p>
-  Edit <code>src/App.js</code> and save to reload.
-</p>
-<a
-  className="App-link"
-  href="https://reactjs.org"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Learn React
-</a>
+4. Do a google image search for a fun bear gif and copy the url (make sure it ends in `.gif`) Replace image `src` tag on line 9 with your selected bear gif and check out the webpage in the browser
 
+---
+
+5. Look at `src/App.css` and try to make the image stop spinning
+
+---
+
+6. Save your bear gif url in a variable called `imageUrl`, use that variable in the image `src` tag, and check out the webpage in the browser
+
+---
+
+7. Convert the function component to a class component, including a `render` method
+8. Add a `state` property to the component with an `imageUrl` field
+9. Update the image src tag to use the component state: `this.state.imageUrl`
+
+---
+
+10. Add an html button to App.js 
+
+```<button>Get More Bear Gifs</button>```
+
+11. Add an onClick callback to the button
+
+```<button onClick={() => window.alert("hello")}>Get More Bear Gifs</button>```
+
+After you see the `hello` message, modify the code to alert the `imageSource`
+```<button onClick={() => window.alert(this.state.imageSource)}>Get More Bear Gifs</button>```
+
+12. Move the onClick function to a separate component method called `fetchImage`
+```<button onClick={this.fetchImage}>Get More Bear Gifs</button>```
+
+
+
+---
+
+13. Modify the `fetchImage` function to fetch an image
+
+[Giphy Developer Docs](https://developers.giphy.com/docs/)
+[Javascript’s Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+**GIPHY API KEY**: `aHi5kZ49h4esZTalKqyvkBO2llvuHeJr`
+
+Example:
+```
+fetch('http://api.giphy.com/v1/gifs/random?api_key=aHi5kZ49h4esZTalKqyvkBO2llvuHeJr&tag=bears')
+  .then(function(response) { return response.json(); }) 
+  .then(function(myJson) { console.log(myJson); });
 ```
 
-9. Check out src/App.css.  Can you figure out why the image is spinning?
-10. Adding a button to src/App.js
-```
-<button>Get More Bear Gifs</button>
-```
+14.  Look at the data that is returned in the console, you can see there is a lot returned.  We only want to use `response.data.images.original.url`
 
-Add an onClick callback to the button
-```
-<button onClick={() =>window.alert("hello")}>I'm a button</button>
-```
+15. Modify your `fetchImage` function to use `this.setState()`
+ - [React State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
-11. Making requests - We will be using Javascript’s Fetch API
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+ - Pass in the `response.data.images.original.url` into imageSource
+ 
+16. Try it out!
+
+## Extra Challenge:
+Add a text input to populate the search string
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
