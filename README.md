@@ -44,19 +44,27 @@ Now open `src/App.js` with a code editor
 
 10. Add an html button to App.js 
 
-```<button>Get More Bear Gifs</button>```
+```
+<button>Get More Bear Gifs</button>
+```
 
 11. Add an onClick callback to the button
 
-```<button onClick={() => window.alert("hello")}>Get More Bear Gifs</button>```
+```
+<button onClick={() => window.alert("hello")}>Get More Bear Gifs</button>
+```
 
 After you see the `hello` message, modify the code to alert the `imageSource`
 
-```<button onClick={() => window.alert(this.state.imageSource)}>Get More Bear Gifs</button>```
+```
+<button onClick={() => window.alert(this.state.imageSource)}>Get More Bear Gifs</button>
+```
 
 12. Move the onClick function to a separate component method called `fetchImage`
 
-```<button onClick={this.fetchImage}>Get More Bear Gifs</button>```
+```
+<button onClick={this.fetchImage}>Get More Bear Gifs</button>
+```
 
 
 
